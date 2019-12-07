@@ -1,11 +1,12 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 function AvengerBlock(props){
     return(
-        <div>
-            <h2>{props.name}</h2>
-            <p>{props.info}</p>
-            <img src={props.thumb}/>
+        <div className='avengerBlock'>
+            <Link to={`/avengers/${props.id}`}>
+                <h2>{props.name}</h2>
+            </Link>
+            <img className='imgBlock' src={props.thumb}/>
         </div>
     )
 }

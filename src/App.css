@@ -24,6 +24,24 @@ nav{
   text-align: center;
 }
 
+.avengerBlock{
+  width: 45%;
+  padding: 5% 0;
+}
+
+.avengerList{
+  display: flex;
+  width: 90%;
+  flex-flow: column;
+}
+
+.test{
+  display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
 
 .navlink{
   padding: 1% 5%;
@@ -31,6 +49,10 @@ nav{
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.AvengerBlock img {
+  width: 50%;
 }
 
 @media (prefers-reduced-motion: no-preference) {

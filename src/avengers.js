@@ -1,4 +1,4 @@
-export const avengers = [
+ const avengers = [
     {
       id: 1,
       name: 'Iron Man',
@@ -147,3 +147,4 @@ export const avengers = [
     }
 ]
 
+export default avengers

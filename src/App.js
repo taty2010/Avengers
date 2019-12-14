@@ -1,11 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import data from './avengers'
 import './App.css';
 import {Route, Link} from 'react-router-dom'
 import Home from './Components/Home'
-import AvengerList from './Components/AvengerList'
+import AvengerList from './Components/AvengerList';
+import Heroes from './Components/Heroes';
 
 function App() {
+  const [hero, sethero] = useState(data)
   return (
     <div className="App">
       <nav>
@@ -18,7 +20,12 @@ function App() {
         </div>
       </nav>
       <Route exact path='/' component={Home} />
-      <Route path='/avengerList' component={AvengerList} />
+      <Route exact path='/avengerList' render={()=>{
+        return <AvengerList items={hero}/>
+      }} />
+      <Route path='/avengerList/:id' render={(routeProps)=>{
+        return <Heroes {...routeProps} items={hero} />
+      }}/>
     </div>
   );
 }
